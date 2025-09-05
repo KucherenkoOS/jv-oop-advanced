@@ -15,7 +15,7 @@ public abstract class Figure implements AreaFigure, DrawFigure {
     public abstract double getArea();
 
     @Override
-    public abstract  void draw();
+    public abstract void draw();
 
     @Override
     public String toString() {

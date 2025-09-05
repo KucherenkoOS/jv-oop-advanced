@@ -18,15 +18,34 @@ public class FigureSupplier {
         int figureType = random.nextInt(switchCaseInt);
         switch (figureType) {
             case 0:
-                return new Square(getRandomDouble(MaxDouble), colorSupplier.getRandomColor());
+                return new Square(
+                        getRandomDouble(MaxDouble),
+                        colorSupplier.getRandomColor()
+                );
             case 1:
-                return new Circle(getRandomDouble(MaxDouble), colorSupplier.getRandomColor());
+                return new Circle(
+                        getRandomDouble(MaxDouble),
+                        colorSupplier.getRandomColor()
+                );
             case 2:
-                return new Rectangle(getRandomDouble(MaxDouble), getRandomDouble(MaxDouble), colorSupplier.getRandomColor());
+                return new Rectangle(
+                        getRandomDouble(MaxDouble),
+                        getRandomDouble(MaxDouble),
+                        colorSupplier.getRandomColor()
+                );
             case 3:
-                return new RightTriangle(getRandomDouble(MaxDouble), getRandomDouble(MaxDouble), colorSupplier.getRandomColor());
+                return new RightTriangle(
+                        getRandomDouble(MaxDouble),
+                        getRandomDouble(MaxDouble),
+                        colorSupplier.getRandomColor()
+                );
             case 4:
-                return new IsoscelesTrapezoid(getRandomDouble(MaxDouble), getRandomDouble(MaxDouble), getRandomDouble(MaxDouble), colorSupplier.getRandomColor());
+                return new IsoscelesTrapezoid(
+                        getRandomDouble(MaxDouble),
+                        getRandomDouble(MaxDouble),
+                        getRandomDouble(MaxDouble),
+                        colorSupplier.getRandomColor()
+                );
             default:
                 return getDefaultFigure();
         }
