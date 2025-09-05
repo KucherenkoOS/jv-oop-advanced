@@ -1,19 +1,16 @@
 package core.basesyntax;
 
-public class IsoscelesTrapezoid implements Figure {
+public class IsoscelesTrapezoid extends  Figure {
     private final double base1;
     private final double base2;
     private final double height;
-    private final Color color;
-
 
     public IsoscelesTrapezoid(double base1, double base2, double height, Color color) {
+        super(color);
         this.base1 = base1;
         this.base2 = base2;
         this.height = height;
-        this.color = color;
     }
-
 
     @Override
     public double getArea() {
@@ -21,16 +18,16 @@ public class IsoscelesTrapezoid implements Figure {
     }
 
     @Override
-    public String draw() {
-        return "Figure: isosceles trapezoid, area: "
+    public void draw() {
+        System.out.println("Figure: isosceles trapezoid, area: "
                 + getArea()
-                + ", base one: "
+                + " sq. units, base one: "
                 + base1
-                + ",base two: "
+                + " units, base two: "
                 + base2
-                + ", height: "
+                + " units, height: "
                 + height
-                + ", color: "
-                + color.name().toLowerCase();
+                + " units, color: "
+                + getColor().name().toLowerCase());
     }
 }

@@ -1,7 +1,24 @@
 package core.basesyntax;
 
-public interface Figure {
-    double getArea();
+public abstract class Figure implements AreaFigure, DrawFigure {
+    private final Color color;
 
-    String draw();
+    public Figure(Color color) {
+        this.color = color;
+    }
+
+    public Color getColor() {
+        return color;
+    }
+
+    @Override
+    public abstract double getArea();
+
+    @Override
+    public abstract  void draw();
+
+    @Override
+    public String toString() {
+        return getClass().getSimpleName() + " with color " + color;
+    }
 }

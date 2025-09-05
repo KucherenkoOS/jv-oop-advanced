@@ -1,9 +1,8 @@
 package core.basesyntax;
 
-
 public class Main {
+    private static final int numberOfFigures = 6;
     public static void main(String[] args) {
-        int numberOfFigures = 6;
         FigureSupplier figureSupplier = new FigureSupplier();
         Figure[] figures = new Figure[numberOfFigures];
         for (int i = 0; i < numberOfFigures / 2; i++) {
@@ -13,7 +12,7 @@ public class Main {
             figures[i] = figureSupplier.getDefaultFigure();
         }
         for (Figure figure : figures) {
-            System.out.println(figure.draw());
+            figure.draw();
         }
     }
 }
