@@ -38,7 +38,6 @@ public class FigureSupplier {
                         color
                 );
             case 3:
-                double
                 return new RightTriangle(
                         side,
                         side2,
