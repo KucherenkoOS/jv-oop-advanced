@@ -3,10 +3,10 @@ package core.basesyntax;
 import java.util.Random;
 
 public class FigureSupplier {
+    private static final double MAX_DOUBLE = 20.5;
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final int switchCaseInt = 5;
-    private static final double MAX_DOUBLE = 20.5;
     private final double defaultDouble = 10;
     private final Color defaultColor = Color.WHITE;
 
