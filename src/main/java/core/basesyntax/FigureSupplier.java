@@ -6,7 +6,7 @@ public class FigureSupplier {
     private final Random random = new Random();
     private final ColorSupplier colorSupplier = new ColorSupplier();
     private final int switchCaseInt = 5;
-    private final double maxDouble = 20.5;
+    private static final double MAX_DOUBLE = 20.5;
     private final double defaultDouble = 10;
     private final Color defaultColor = Color.WHITE;
 
@@ -16,35 +16,40 @@ public class FigureSupplier {
 
     public Figure getRandomFigure() {
         int figureType = random.nextInt(switchCaseInt);
+        Color color = colorSupplier.getRandomColor();
+        double side = getRandomDouble(MAX_DOUBLE);
+        double side2 = getRandomDouble(MAX_DOUBLE);
+        double side3 = getRandomDouble(MAX_DOUBLE);
         switch (figureType) {
             case 0:
                 return new Square(
-                        getRandomDouble(maxDouble),
-                        colorSupplier.getRandomColor()
+                        side,
+                        color
                 );
             case 1:
                 return new Circle(
-                        getRandomDouble(maxDouble),
-                        colorSupplier.getRandomColor()
+                        side,
+                        color
                 );
             case 2:
                 return new Rectangle(
-                        getRandomDouble(maxDouble),
-                        getRandomDouble(maxDouble),
-                        colorSupplier.getRandomColor()
+                        side,
+                        side2,
+                        color
                 );
             case 3:
+                double
                 return new RightTriangle(
-                        getRandomDouble(maxDouble),
-                        getRandomDouble(maxDouble),
-                        colorSupplier.getRandomColor()
+                        side,
+                        side2,
+                        color
                 );
             case 4:
                 return new IsoscelesTrapezoid(
-                        getRandomDouble(maxDouble),
-                        getRandomDouble(maxDouble),
-                        getRandomDouble(maxDouble),
-                        colorSupplier.getRandomColor()
+                        side,
+                        side2,
+                        side3,
+                        color
                 );
             default:
                 return getDefaultFigure();
